@@ -1,0 +1,32 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Empresas</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="addEmpresa()" outline>
+        <ion-icon name="add-circle"></ion-icon>
+        add
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let e of empresas|async">
+      <ion-thumbnail item-start>
+        <img src="../../assets/mpb_bar_logo.jpg">
+      </ion-thumbnail>
+      <h1> {{ e.nome }}</h1>
+      <p> {{ e.endereco }}, {{ e.enderecoNumero }} </p>
+      <p> {{ e.tags }} </p>
+      <ion-buttons item-end>
+        <button ion-button clear (click)="exibirInformacao(e)">
+          <ion-icon name="information-circle"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-item>
+  </ion-list>
+</ion-content>

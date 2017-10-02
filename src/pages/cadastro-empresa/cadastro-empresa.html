@@ -1,0 +1,38 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Cadastro de Empresa</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-item>
+    <ion-label fixed>Nome:</ion-label>
+    <ion-input type="text" [(ngModel)]="empresa.nome"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label fixed>Endereço:</ion-label>
+    <ion-input type="text" value="" [(ngModel)]="empresa.endereco"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label fixed>Numero:</ion-label>
+    <ion-input type="number" value=0 min=0 [(ngModel)]="empresa.enderecoNumero"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label fixed>Telefone:</ion-label>
+    <ion-input type="text" value="" [(ngModel)]="empresa.telefone"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label fixed>Tags:</ion-label>
+    <ion-input type="text" value="" [(ngModel)]="empresa.tags"></ion-input>
+  </ion-item>
+
+  <button ion-button full (click)="salvar()">Salvar</button>
+
+</ion-content>

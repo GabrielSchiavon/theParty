@@ -1,0 +1,40 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ this.empresa.nome }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-card class="redimensiona">
+    <img class="imagem" src="../../assets/mpb_bar_logo.jpg">
+  </ion-card>
+
+  <ion-list>
+    <ion-item>
+        <ion-label>Nome:</ion-label>
+        <ion-input type="text" readonly="true" placeholder="{{ this.empresa.nome }}"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Endereco:</ion-label>
+        <ion-input type="text" readonly="true" placeholder="{{ empresa.endereco }}, {{ empresa.enderecoNumero }}"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Cidade:</ion-label>
+      <ion-input type="text" readonly="true" placeholder="{{ empresa.cidade }}"></ion-input>
+  </ion-item>
+
+    <ion-item>
+        <ion-label>Telefone:</ion-label>
+        <ion-input type="tel" readonly="true" placeholder="{{ empresa.telefone }}"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <div map id="map"></div>
+  </ion-item>
+  </ion-list>
+</ion-content>

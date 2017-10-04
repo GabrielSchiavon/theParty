@@ -1,0 +1,12 @@
+page-empresa-detalhe {
+    .imagem {
+        max-height: 100%;
+        max-width: 100%;
+    }
+
+    .redimensiona {
+        width: auto;
+        height: 175px;
+        object-fit: contain;
+    }
+}

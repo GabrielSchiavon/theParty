@@ -1,3 +1,5 @@
+import { GoogleMaps } from '@ionic-native/google-maps';
+import { EmpresaDetalhePage } from './../pages/empresa-detalhe/empresa-detalhe';
 import { CadastroEmpresaPage } from './../pages/cadastro-empresa/cadastro-empresa';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -32,6 +34,7 @@ export const firebaseConfig = {
     HomePage,
     EmpresaPage,
     CadastroEmpresaPage,
+    EmpresaDetalhePage,
     TabsPage
   ],
   imports: [
@@ -47,11 +50,13 @@ export const firebaseConfig = {
     HomePage,
     EmpresaPage,
     CadastroEmpresaPage,
+    EmpresaDetalhePage,
     TabsPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    GoogleMaps,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     EmpresaProvider
   ]

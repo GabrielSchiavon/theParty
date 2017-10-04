@@ -1,3 +1,4 @@
+import { EmpresaDetalhePage } from './../empresa-detalhe/empresa-detalhe';
 import { CadastroEmpresaPage } from './../cadastro-empresa/cadastro-empresa';
 import { EmpresaProvider } from './../../providers/empresa/empresa';
 import { Empresa } from './../../modelos/Empresa';
@@ -30,6 +31,6 @@ export class EmpresaPage {
   }
 
   exibirInformacao(empresa) {
-    
+    this.navCtrl.push(EmpresaDetalhePage, {empresa:empresa});
   }
 }
